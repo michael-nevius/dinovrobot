@@ -1,9 +1,16 @@
 class Dinosaur:
     def __init__(self, name, attack_power):
-        self.name = 'Maximal Wrex'
-        self.health = int(100)
+        self.name = name
+        self.health = 100
+        self.attack_power = attack_power
         
         
 
-    def attack_robot(self, robot_to_attack):
-        self.robot_to_attack = 15
+    def attack_robot(self, robot):
+        if robot.health >= self.attack_power:
+            robot.health -= self.attack_power
+            print(f'{self.name} attacked {robot.name} causing {self.attack_power} damage. {robot.name} has {robot.health} remaining.')
+
+        else:
+            robot.health = 0
+        

@@ -3,11 +3,9 @@ from robot import Robot
 
 class Battlefield:
     def __init__(self):
-        self.robot_name = 'Optimus Prime'
-        self.dinosaur_name = 'Maximal Wrex'
-        self.robot_weapon = 'Sword'
-        self.dinosaur = 'Bite'
-        
+        self.robot_name = Robot
+        self.dinosaur_name = Dinosaur
+               
 
     def run_game(self):
         self.display_welcome()
@@ -19,37 +17,20 @@ class Battlefield:
             
 
     def battle_phase(self):
-        user_input = input(int)('The choice is yours please enter "1" for Optimus Prime or "2" for Maximal Wrex: ')
-
-        if user_input == int(1):
-            print(f'It looks like {self.dinosaur_name} is going to make the first attack with {self.dinosaur}!')
-            print(f'{self.dinosaur_name} attacks {self.robot_name} for 15 health.')
-            print(f'{self.robot_name} attacks {self.dinosaur_name} for 20 health.')
-            print(f'{self.dinosaur_name} attacks {self.robot_name} for 15 health.')
-            print(f'{self.robot_name} attacks {self.dinosaur_name} for 20 health.')
-            print(f'{self.dinosaur_name} attacks {self.robot_name} for 15 health.')
-            print(f'{self.robot_name} attacks {self.dinosaur_name} for 20 health.')
-            print(f'{self.dinosaur_name} attacks {self.robot_name} for 15 health.')
-            print(f'{self.robot_name} attacks {self.dinosaur_name} for 20 health.')
-            print(f'{self.dinosaur_name} attacks {self.robot_name} for 15 health.')
-            print(f'{self.robot_name} attacks {self.dinosaur_name} for 20 health.')
-            print(f'{self.dinosaur_name} has been defeated by {self.robot_name}!')
-            
-        
-        elif user_input == int(2):
-            print(f'It looks like {self.robot_name} is going to make the first attack with {self.robot_weapon}!')
-            print(f'{self.robot_name} attacks {self.dinosaur_name} for 20 health.')
-            print(f'{self.dinosaur_name} attacks {self.robot_name} for 15 health.')
-            print(f'{self.robot_name} attacks {self.dinosaur_name} for 20 health.')
-            print(f'{self.dinosaur_name} attacks {self.robot_name} for 15 health.')
-            print(f'{self.robot_name} attacks {self.dinosaur_name} for 20 health.')
-            print(f'{self.dinosaur_name} attacks {self.robot_name} for 15 health.')
-            print(f'{self.robot_name} attacks {self.dinosaur_name} for 20 health.')
-            print(f'{self.dinosaur_name} attacks {self.robot_name} for 15 health.')
-            print(f'{self.robot_name} attacks {self.dinosaur_name} for 20 health.')
-            print(f'{self.dinosaur_name} has been defeated by {self.robot_name}!')
+        while self.robot_name and self.dinosaur_name:
+            if len(self.robot_name) >= 1:
+                self.robot_name.attack_dinosaur
+            else:
+                break
+            if len(self.dinosaur_name) >= 1:
+                self.dinosaur_name.attack_robot
+            else:
+                break
                 
     
 
     def display_winner(self):
-        print(f'The winner is {self.robot_name} all praise the Autobots!')
+        if len(self.dinosaur_name) == 0:
+            print(f"{self.dinosaur_name} has defeated {self.robot_name}.")
+        else:
+            print(f"{self.robot_name} has defeated {self.dinosaur_name}.")
