@@ -1,4 +1,4 @@
 class Weapon:
-    def __init__(self):
-        self.name ='Laserbeam'
-        self.attackpower = int(35)
+    def __init__(self, type, attackpower):
+        self.type = type
+        self.attackpower = attackpower
