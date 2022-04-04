@@ -19,5 +19,16 @@ class Battlefield:
 
     def battle_phase(self):
         user_input = input(int)('The choice is yours please enter "1" for Optimus Prime or "2" for Maximal Wrex: ')
+
+        if user_input == int(1):
+            print(f'It looks like {self.dinosaur_name} is going to make the first attack!')
+
+        elif user_input == int(2):
+            print(f'It looks like {self.robot_name} is going to make the first attack!')    
+   
+
+
+    def display_winner(self):
+
         
 
