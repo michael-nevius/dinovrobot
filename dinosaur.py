@@ -6,4 +6,4 @@ class Dinosaur:
         
 
     def attack_robot(self, robot_to_attack):
-        
+        self.robot_to_attack = 15
