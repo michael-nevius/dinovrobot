@@ -5,7 +5,8 @@ class Battlefield:
     def __init__(self):
         self.robot_name = 'Optimus Prime'
         self.dinosaur_name = 'Maximal Wrex'
-        self.weapon = "Sword"
+        self.robot_weapon = 'Sword'
+        self.dinosaur = 'Bite'
         
 
     def run_game(self):
