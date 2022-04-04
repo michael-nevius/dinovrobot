@@ -1,3 +1,5 @@
+from weapon import Weapon
+
 class Robot:
     def __init__(self, name, Weapon):
         self.name = "Optimus Prime"
@@ -7,7 +9,7 @@ class Robot:
         
     def attack_dinosaur(self, dinosaur_to_attack):
         if self.power > 20:
-            print(f'{self.name} attacked{dinosaur_to_attack.type}')
+            print(f'{self.name} attacked{dinosaur_to_attack.name}')
             self.power -= 20
             dinosaur_to_attack.health -= self.weapon.attackpower
             print(f'{self.name} power level is now {self.power}')
