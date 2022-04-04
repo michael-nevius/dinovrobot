@@ -9,6 +9,6 @@ class Dinosaur:
         if self.energy > 10:
             print(f'{self.name} attacked {robot_to_attack.name}')
             self.energy -= 10
-            robot_to_attack.health -= self.attack_power
+            robot_to_attack.health -= self.attackpower
             print(f'{self.name} energy is now {self.energy}')
             print(f'{robot_to_attack.name} health is now {robot_to_attack.health}')
