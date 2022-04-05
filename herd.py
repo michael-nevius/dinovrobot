@@ -3,7 +3,7 @@ from dinosaur import Dinosaur
 class Herd:
     def __init__(self, name) -> None:
         self.name = name
-        self.dinosaurs = [Dinosaur('Grimlock', 35), Dinosaur('Snarl', 25), Dinosaur('Sludge', 30)]
+        self.dinosaurs = [Dinosaur('Grimlock', 45), Dinosaur('Snarl', 25), Dinosaur('Sludge', 30)]
         self.active_dinosaur = None
         self.total_herd_health = 300
 
