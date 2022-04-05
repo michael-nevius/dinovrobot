@@ -1,10 +1,10 @@
 from weapon import Weapon
 class Robot:
-    def __init__(self, name,) -> None:
+    def __init__(self, name):
         self.name = name
         self.health = 100
         self.active_weapon = None
-        self.weapons =  [Weapon('Sword', 30) Weapon('Plasma Rifle', 50) Weapon('Tackle', 15)]
+        self.weapons =  [Weapon('Sword', 30), Weapon('Plasma Rifle', 50), Weapon('Tackle', 15)]
         
     def attack_dinosaur(self, dinosaur):
         self.active_weapon()
