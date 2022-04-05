@@ -1,9 +1,7 @@
 import random
 from fleet import Fleet
 from herd import Herd
-
 class Battlefield:
-
     def __init__(self) -> None:
         self.fleet = Fleet ('Autobots')
         self.herd = Herd ('Decepticons')               
