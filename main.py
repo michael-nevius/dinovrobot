@@ -1,4 +1,4 @@
 from battlefield import Battlefield
 
-battlefield = Battlefield()
-battlefield.run_game()
+autobots_v_decepticons = Battlefield()
+autobots_v_decepticons.run_game()

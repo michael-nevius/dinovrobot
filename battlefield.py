@@ -4,7 +4,7 @@ from herd import Herd
 
 class Battlefield:
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.fleet = Fleet ('Autobots')
         self.herd = Herd ('Decepticons')               
 
@@ -20,12 +20,12 @@ class Battlefield:
         while self.fleet.robots and self.herd.dinosaurs:
             self.fleet.select_active_robot()
             if len(self.fleet.robots) >= 1:
-                self.fleet.active_robot.attack_dinosaur(random.choice(self.herd.dinosaurs))
+                self.fleet.active_robot.attack(random.choice(self.herd.dinosaurs))
             else:
                 break
             self.herd.select_active_dionsaur()
             if len(self.herd.dinosaurs) >= 1:
-                self.herd.active_dinosaur.attack_robot(random.choice(self.fleet.robots))
+                self.herd.active_dinosaur.attack(random.choice(self.fleet.robots))
             else:
                 break
                 
