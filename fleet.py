@@ -1,9 +1,8 @@
 import random
 from robot import Robot
-
 class Fleet:
     
-    def __init__(self, name):
+    def __init__(self, name) -> None:
         self.name = name
         self.robots = [Robot('Optimus Prime'), Robot('Bumble Bee'), Robot('Jazz')]
         self.active_robot = None

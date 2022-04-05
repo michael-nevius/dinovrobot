@@ -6,8 +6,7 @@ class Battlefield:
 
     def __init__(self):
         self.fleet = Fleet ('Autobots')
-        self.herd = Herd ('Decepticons')
-               
+        self.herd = Herd ('Decepticons')               
 
     def run_game(self):
         self.display_welcome()
@@ -16,7 +15,6 @@ class Battlefield:
 
     def display_welcome(self):
         print(f'Welcome to Autobots vs. Decepticons who will be the winner?')
-            
 
     def battle_phase(self):
         while self.fleet.robots and self.herd.dinosaurs:
@@ -36,4 +34,3 @@ class Battlefield:
             print(f'{self.herd.name} have defeated {self.fleet.name}.')
         else:
             print(f'{self.fleet.name} have defeated {self.herd.name}.')
-
