@@ -21,4 +21,4 @@ class Herd:
         for dinosaur in self.dinosaurs:
             if dinosaur.health == 0:
                 self.dinosaurs.remove(dinosaur)
-                print(f"{dinosaur.name} has been defeated.")
+                print(f'{dinosaur.name} has been defeated.')

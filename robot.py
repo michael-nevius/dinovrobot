@@ -22,10 +22,10 @@ class Robot:
         while user_input > max_attacks:
             n = 0
             for attack in self.weapons:
-                print(f"{n} : {attack.name}")
+                print(f'{n} : {attack.name}')
                 n += 1
-            user_input = abs(int(input("Choose an attack by its number : ")))
-        print("You chose " + str(self.weapons[user_input].name) + ".")
+            user_input = abs(int(input('Choose an attack by its number : ')))
+        print('You chose ' + str(self.weapons[user_input].name) + '.')
         self.active_weapon = self.weapons[user_input]
 
  
