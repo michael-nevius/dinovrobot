@@ -24,4 +24,4 @@ class Fleet:
         for robot in self.robots:
             if robot.health == 0:
                 self.robots.remove(robot)
-                print(f'{robot.name} has been detroyed in battle, please help the auto bots.')
+                print(f'{robot.name} has been detroyed in battle, please help the Autobots!')
