@@ -12,7 +12,7 @@ class Battlefield:
         self.display_winner()   
 
     def display_welcome(self):
-        print(f'Welcome to Autobots vs. Decepticons who will be the winner?')
+        print('Welcome to Autobots vs. Decepticons who will be the winner?')
 
     def battle_phase(self):
         while self.fleet.robots and self.herd.dinosaurs:
@@ -29,6 +29,6 @@ class Battlefield:
                 
     def display_winner(self):
         if len(self.herd.dinosaurs) == 0:
-            print(f'{self.herd.name} have defeated {self.fleet.name}.')
-        else:
             print(f'{self.fleet.name} have defeated {self.herd.name}.')
+        else:
+            print(f'{self.herd.name} have defeated {self.fleet.name}.')
